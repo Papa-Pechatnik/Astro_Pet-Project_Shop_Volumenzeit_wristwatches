@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src:
+        local(""),
+        url("./fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src:
+        local(""),
+        url("./fonts/Poppins/Poppins-Medium.woff2") format("woff2");
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src:
+        local(""),
+        url("./fonts/Poppins/Poppins-SemiBold.woff2") format("woff2");
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src:
+        local(""),
+        url("./fonts/Poppins/Poppins-Bold.woff2") format("woff2");
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    src:
+        local(""),
+        url("./fonts/Poppins/Poppins-ExtraBold.woff2") format("woff2");
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: "Space Age Cyrillic";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src:
+        local(""),
+        url("./fonts/SpaceAge/SpaceAgeCyrillic-Regular.woff2") format("woff2");
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: "icomoon";
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src:
+        local(""),
+        url("./fonts/icomoon/icomoon.woff2") format("woff2"),
+        url("./fonts/icomoon/icomoon.svg?nhx0ok#icomoon") format("svg");
+        /* url("fonts/icomoon.svg?nhx0ok#icomoon") format("svg"); */
+    text-rendering: optimizeLegibility;
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    /* speak: never; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+    content: "\e900";
+}
+.icon-shop-cart:before {
+    content: "\e901";
+
+}
+.icon-play:before {
+    content: "\e902";
+}
+/* .icon-pinterest:before {
+    content: "\e903";
+}
+.icon-facebook:before {
+    content: "\e904";
+}
+.icon-twitter:before {
+    content: "\e905";
+}
+.icon-instagram:before {
+    content: "\e906";
+} */
+.icon-arrow-down:before {
+    content: "\e907";
+}
+.icon-delete:before {
+    content: "\e908";
+}

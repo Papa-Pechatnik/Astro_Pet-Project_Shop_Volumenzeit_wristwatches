@@ -1,0 +1,160 @@
+---
+import LinkWatchDesign from "../LinkWatchDesign/LinkWatchDesign.astro";
+---
+
+<section class="design">
+  <span class="triangle"></span>
+  <div class="container container_padding">
+    <div class="design-section">
+      <h2 class="title">Design your Watch</h2>
+      <ul class="list">
+        <li class="item">
+          <p class="item-number"><span>1</span></p>
+          <p class="item-subtitle">Case Color</p>
+        </li>
+        <li class="item">
+          <p class="item-number"><span>2</span></p>
+          <p class="item-subtitle">Dial Design</p>
+        </li>
+        <li class="item">
+          <p class="item-number"><span>3</span></p>
+          <p class="item-subtitle">Dial Color</p>
+        </li>
+        <li class="item">
+          <p class="item-number"><span>4</span></p>
+          <p class="item-subtitle">Strap Design</p>
+        </li>
+      </ul>
+      <LinkWatchDesign class="link-design_w208 link-design_black link-design" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .design {
+    position: relative;
+    color: var(--color-white);
+    background: var(--color-blue);
+    padding-top: 76px;
+    padding-bottom: 81px;
+  }
+  .triangle {
+    position: absolute;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 43px 39px 0 39px;
+    border-color: var(--color-white) transparent transparent transparent;
+    transform: rotate(0deg);
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .design-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    font-family: var(--font-SpaceAge);
+    font-size: 42px;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+
+  .list {
+    --list-step: 61px;
+    display: flex;
+    padding: var(--list-step) 0 56px;
+  }
+
+  .item {
+    /*768-48, 576-18*/
+    --margin-width: clamp(1.125rem, -4.5rem + 15.625vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 var(--margin-width);
+    row-gap: 18px;
+  }
+
+  .item-number {
+    --size: 86px;
+    --font-size: 32px;
+    --line-h: 0.78;
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+
+    background-image: url("./SectionDesignList/circle.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .item-number::before {
+    --circle-min: 72px;
+    margin-left: var(--circle-min);
+    content: "";
+    height: 1px;
+    background-color: var(--color-white);
+    width: calc(2 * (var(--margin-width) + (var(--size) - var(--circle-min))));
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  .item:nth-last-child(1) .item-number::before {
+    display:none
+  }
+
+  .item-number span {
+    position: absolute;
+    top: calc(var(--font-size) * var(--line-h));
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-family: var(--font-SpaceAge);
+    font-size: var(--font-size);
+    line-height: var(--line-h);
+  }
+
+  .item-subtitle {
+    font-size: 12px;
+    text-transform: capitalize;
+    line-height: 200%;
+  }
+
+  @media screen and (max-width: 576px) {
+    .design {
+      padding-top: 91px;
+      padding-bottom: 98px;
+    }
+    .list {
+      flex-direction: column;
+      padding: 30px 0;
+    }
+
+    .item {
+      flex-direction: column-reverse;
+      row-gap: 10px;
+      margin-bottom: 70px;
+    }
+
+    .item-number::before {
+      margin-left: 0;
+      margin-top: var(--list-step);
+      left: calc(var(--font-size) * var(--line-h) / 2);
+      transform: rotate(90deg);
+    }
+
+    /* надо подправить */
+    .item:nth-last-child(1) {
+      margin-bottom: 0px;
+    }
+  }
+</style>

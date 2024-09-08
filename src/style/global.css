@@ -1,0 +1,63 @@
+@import url("./normalize.css");
+@import url("./font.css");
+
+
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-ghost-white: #f9fafe;
+  --color-grey: #939393;
+  --color-blue: #735cff;
+  --color-coral:#FF8585;
+
+  --width: 1440px;
+  --indent: clamp(1.125rem, -19.21906rem + 32.813vw, 10.3125rem);
+
+  --xs: 360px;
+  --sm: 576px;
+  --base: 768px;
+  --lg: 992px;
+  --xl: 1200px;
+  --xxl: 1400px;
+
+  --font-Poppins: "Poppins", Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+  --font-SpaceAge: "Space Age Cyrillic", "Lucida Console", "Monaco", monospace;
+}
+
+body {
+  font-family: var(--font-Poppins);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-grey);
+  background: var(--color-white);
+}
+h2,
+h3 {
+margin-block: 0;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: var(--width);
+}
+
+.container_padding {
+padding: 0 var(--indent);
+}
+
+.margin_left {
+  margin-left: var(--indent);
+}
+/* .margin_right { */
+  /* h1 {font-size: clamp(1.125rem, -19.21906rem + 32.813vw, 10.3125rem);} */
+  /* margin-right: clamp(1.125rem, -2.16865rem + 13.868vw, 10.3125rem); */
+/* } */
+
+.font_w400 {font-weight: 400};
+.font_w500 {font-weight: 500};
+.font_w600 {font-weight: 600};
+.font_w700 {font-weight: 700};
+.font_w800 {font-weight: 800};
+
+

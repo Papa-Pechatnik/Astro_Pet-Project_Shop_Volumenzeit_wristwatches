@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import src from "./icon_facebook.svg";
+
+const alt = "logo facebook"
+---
+
+<a href='/'>
+  <Image class="logo-facebook" src={src} alt={alt}></Image>
+</a>
+
+<style>
+    a {
+        display: block;
+    }
+
+    .logo-facebook {
+        width: 7px;
+        height: auto;
+    }
+</style>

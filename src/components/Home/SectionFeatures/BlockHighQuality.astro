@@ -1,0 +1,41 @@
+---
+import ContentHighQuality from "../../../content/home/sectionfeatures/block-high-quality.md";
+---
+
+<article class="hq text-right">
+  <div class="decor">
+    <span class="decor-right decor-line"></span>
+    <h3 class="features-subtitle">High Quality Components</h3>
+    <p>
+      <ContentHighQuality />
+    </p>
+  </div>
+</article>
+
+<style>
+  .hq {
+    grid-area: hq;
+  }
+
+  .decor {
+    position: relative;
+
+  }
+  .decor-right::after {
+    content: url("./img/decor.svg");
+    position: absolute;
+    top: 50%;
+    right: -55px;
+    transform: translate(0, -50%);
+  }
+
+  .decor-line::before {
+    position: absolute;
+    content: url("./img/decor-line.svg");
+    top: 0;
+    left: 303px;
+    width: 114px;
+    height: auto;
+    transform: rotate(180deg);
+  }
+</style>

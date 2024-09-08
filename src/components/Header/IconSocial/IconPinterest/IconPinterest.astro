@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import src from "./icon_pinterest.svg";
+
+const alt = "logo Pinterest"
+---
+
+<a href='/'>
+  <Image class="logo-pinterest" src={src} alt={alt}></Image>
+</a>
+
+<style>
+    a {
+        display: block;
+    }
+
+    .logo-pinterest {
+        width: 9px;
+        height: auto;
+    }
+</style>

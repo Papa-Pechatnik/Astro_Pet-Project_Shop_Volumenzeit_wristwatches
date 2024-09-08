@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import src from "./icon_twitter.svg";
+
+const alt = "logo Twitter"
+---
+
+<a href='/'>
+  <Image class="logo-twitter" src={src} alt={alt}></Image>
+</a>
+
+<style>
+    a {
+        display: block;
+    }
+
+    .logo-twitter {
+        width: 12px;
+        height: auto;
+    }
+</style>

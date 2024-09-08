@@ -1,0 +1,103 @@
+---
+import IconFacebook from "./IconSocial/IconFacebook/IconFacebook.astro";
+import IconInstagram from "./IconSocial/IconInstagram/IconInstagram.astro";
+import IconPinterest from "./IconSocial/IconPinterest/IconPinterest.astro";
+import IconTwitter from "./IconSocial/IconTwitter/IconTwitter.astro";
+
+export type Props = {
+  ["data-navsocial"]?: string;
+};
+
+const { ["data-navsocial"]: data = "" } = Astro.props;
+---
+<nav class="nav-social" data-navsocial={[data]}>
+    <ul class="social-list">
+        <li class="icon-social">
+            <IconFacebook />
+        </li>
+        <li class="icon-social">
+            <IconPinterest />
+        </li>
+        <li class="icon-social">
+            <IconTwitter />
+        </li>
+        <li class="icon-social">
+            <IconInstagram />
+        </li>
+        </ul>
+    </ul>
+    <p class="social-text">Follow us</p>
+</nav>
+
+<style>
+    .nav-social {
+        bottom: 0;
+        align-content: center;
+        gap: 20px;
+        /*1440-65 1200-18px*/
+margin-left: clamp(1.125rem, -13.56225rem + 19.583vw, 4.0625rem);
+    }
+    .nav-social[data-navsocial="open"] {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        
+    }
+    .nav-social[data-navsocial="close"] {
+        display: none;
+    }
+
+
+/*-------------------- LJC>LF ---------*/////
+    .social-list {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .icon-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .social-text {
+        font-family: var(--font-SpaceAge);
+        font-size: 14px;
+        letter-spacing: 0.44em;
+        color: var(--color-black);
+        text-wrap: nowrap;
+        text-transform: uppercase;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+    @media screen and (max-width: 1199.98px) {
+        .nav-social[data-navsocial="open"] {
+        display: none;
+    }
+    .nav-social[data-navsocial="close"] {
+        display: flex;
+        flex-direction: row;
+        margin-top: 30px;
+    }
+
+    .social-list {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .social-text {
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+}
+</style>

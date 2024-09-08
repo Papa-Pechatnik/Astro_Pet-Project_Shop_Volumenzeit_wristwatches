@@ -1,0 +1,62 @@
+---
+const NavLinks = [
+    { titel: "Watches", href: "/watches" },
+    { titel: "Accessories", href: "/accessories" },
+    { titel: "Jewelry", href: "/jewelry" },
+    { titel: "Brand", href: "/brand" },
+    ];
+---
+
+<nav>
+    <ul class="nav-list">
+        { NavLinks.map((item) => 
+        <li class="nav-item">
+            <a class="nav-item__link" target="_blank" href={item.href} title={item.titel}>{item.titel}</a>
+        </li>
+        ) }
+    </ul>
+</nav>
+
+<style>
+  .nav-list {
+    display: flex;
+    align-items: center;
+    /* 1440-35px 992-28px*/
+    column-gap: clamp(1.75rem, 0.78094rem + 1.563vw, 2.1875rem);
+  }
+
+  .nav-item {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    padding: 5px 0;
+    cursor: pointer;
+  }
+
+  .nav-item:after {
+    position: absolute;
+    background-color: var(--color-blue);
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: -1px;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-item:is(:hover, :focus):after {
+    width: 1.3125rem;
+  }
+
+  .nav-item__link {
+    /* 1440-14px 992-11px*/
+    font-size: clamp(0.6875rem, 0.2721rem + 0.67vw, 0.875rem);
+    color: var(--color-grey);
+    line-height: 1;
+  }
+
+  .nav-item__link_activ {
+    color: var(--color-black);
+    font-weight: 600;
+  }
+</style>

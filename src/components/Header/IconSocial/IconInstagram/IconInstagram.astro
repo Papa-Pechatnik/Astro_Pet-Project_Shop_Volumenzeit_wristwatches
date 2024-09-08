@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+import src from "./icon_instagram.svg";
+
+const alt = "logo Instagram"
+---
+
+<a href='/'>
+  <Image class="logo-instagram" src={src} alt={alt}></Image>
+</a>
+
+<style>
+    a {
+        display: block;
+    }
+
+    .logo-instagram {
+        width: 10px;
+        height: auto;
+    }
+</style>

@@ -1,0 +1,75 @@
+---
+import LinkWatchDesign from "../Link/LinkWatchDesign.astro";
+---
+
+<section class="block-actions">
+    <LinkWatchDesign class="link-design link-design_blue link-design_small" />
+    <div class="actions-items">
+        <button class="icon icon-button icon-user"></button>
+        <div class="shop-cart">
+            <i class="icon icon-shop-cart"></i>
+            <div class="shop-cart-products">
+                <p class="shop-cart-products__number">22</p>
+            </div>
+        </div>
+        <button class="icon-button close">Х</button>
+    </div>
+</section>
+
+<style>
+/* block-actions */
+.block-actions {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5625rem;
+  }
+
+  /*actions__items*/
+  .actions-items {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5625rem;
+  }
+  .icon {
+    font-size: 1.25rem;
+    color: var(--color-blue);
+    padding: 0;
+  }
+
+  .icon-button {
+    border: transparent;
+    background: transparent;
+  }
+
+  /* shop-cart */
+  .shop-cart {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: 3em;
+    align-items: center;
+  }
+
+  .shop-cart-products {
+    align-self: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    /* visibility: hidden; */
+    border-radius: 50%;
+    background-color: var(--color-coral);
+  }
+
+  .shop-cart-products__number {
+    font-size: 0.5rem;
+    color: var(--color-white);
+  }
+
+  /* ------------------------------------ временный класс*/
+  .close {
+    display: none;
+  }
+
+
+  <style>

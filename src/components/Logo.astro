@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import logo from "/public/img/logo.svg";
+
+export type Props = {
+  ["class"]?: string;
+};
+
+const { ["class"]: className = "" } = Astro.props;
+// console.log({ className });
+
+---
+
+<a href='/'>
+  <Image class:list={[className]} src={logo} alt="logo Volumenzeit"></Image>
+</a>
+
+<style>
+    .logo-header {
+        display: block;
+        width: clamp(11.125rem, 0.46844rem + 17.188vw, 15.9375rem);
+        height: auto;
+    }
+</style>

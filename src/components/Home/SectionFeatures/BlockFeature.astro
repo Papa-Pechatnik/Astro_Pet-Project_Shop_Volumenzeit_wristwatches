@@ -1,0 +1,44 @@
+---
+import ContentFeatures from "../../../content/home/sectionfeatures/block-feature.md";
+---
+
+<article class="feature text-left">
+  <p class="decor">
+    <span class="decor-left decor-line"></span>
+    <h3 class="features-subtitle" >Feature</h3>
+  </p>
+  <p><ContentFeatures /></p>
+</article>
+
+<style>
+  .feature {
+    grid-area: feature;
+    display: flex;
+    flex-direction: column;
+    margin-top:81px;
+  }
+
+  .decor {
+    position: relative;
+  }
+
+  .decor-line::after {
+    position: absolute;
+    content: url("./img/decor-line.svg");
+    top: 0.75em;
+    left: -133px;
+    width: 101px;
+    height: 61px;
+  }
+
+  .decor-left::before {
+    z-index: 1;
+    --left: 13px;
+    content: url("./img/decor.svg");
+    position: absolute;
+    top: -1em;
+    left: calc(-35px - var(--left));
+  }
+
+
+</style>
