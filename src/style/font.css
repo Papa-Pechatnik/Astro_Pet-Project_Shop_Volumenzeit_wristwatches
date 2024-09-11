@@ -5,7 +5,7 @@
     font-display: swap;
     src:
         local(""),
-        url("./fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+        url("./fonts/poppins/Poppins-Regular.woff2") format("woff2");
     text-rendering: optimizeLegibility;
 }
 
@@ -16,7 +16,7 @@
     font-display: swap;
     src:
         local(""),
-        url("./fonts/Poppins/Poppins-Medium.woff2") format("woff2");
+        url("./fonts/poppins/Poppins-Medium.woff2") format("woff2");
     text-rendering: optimizeLegibility;
 }
 
@@ -27,7 +27,7 @@
     font-display: swap;
     src:
         local(""),
-        url("./fonts/Poppins/Poppins-SemiBold.woff2") format("woff2");
+        url("./fonts/poppins/Poppins-SemiBold.woff2") format("woff2");
     text-rendering: optimizeLegibility;
 }
 
@@ -38,7 +38,7 @@
     font-display: swap;
     src:
         local(""),
-        url("./fonts/Poppins/Poppins-Bold.woff2") format("woff2");
+        url("./fonts/poppins/Poppins-Bold.woff2") format("woff2");
     text-rendering: optimizeLegibility;
 }
 
@@ -49,7 +49,7 @@
     font-display: swap;
     src:
         local(""),
-        url("./fonts/Poppins/Poppins-ExtraBold.woff2") format("woff2");
+        url("./fonts/poppins/Poppins-ExtraBold.woff2") format("woff2");
     text-rendering: optimizeLegibility;
 }
 
@@ -60,7 +60,7 @@
     font-display: swap;
     src:
         local(""),
-        url("./fonts/SpaceAge/SpaceAgeCyrillic-Regular.woff2") format("woff2");
+        url("./fonts/spaceAge/SpaceAgeCyrillic-Regular.woff2") format("woff2");
     text-rendering: optimizeLegibility;
 }
 

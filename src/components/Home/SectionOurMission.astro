@@ -1,0 +1,201 @@
+---
+import { Picture } from "astro:assets";
+import LinkWatchDesign from "../LinkWatchDesign/LinkWatchDesign.astro";
+import myImage from "../../../public/img/watches/volumenzeit_m-25/promotion_volumenzeit_m-25.png";
+---
+
+<section class="ourmission">
+  <div class="ourmission-picture">
+    <Picture
+      class="ourmission-img"
+      src={myImage}
+      formats={["avif", "webp"]}
+      width="500"
+      height="668"
+      alt="promotion volumenzeit m-25"
+    />
+  </div>
+
+  <div class="ourmission-block">
+    <div class="ourmission-content">
+      <h2 class="title">Our Mission</h2>
+      <p class="text">
+        We have invested 6 year of our lifes to invent a new technology of
+        production a 3D dials with quality of wristwatch industry. All what we
+        need to turn on our imagination on maximum.<br />
+        <br />
+        We love Out-of-the-box designs and believe there are many people who thinks
+        the same.
+      </p>
+      <LinkWatchDesign class="link-design_w208 link-design_blue link-design" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .ourmission {
+    position: relative;
+    --ourmission-img_width: clamp(27.75rem, 45vw, 31.25rem);
+    --ourmission-img_height: 41.75rem;
+    --line_height: 76px; /*тут значение 76px*/
+    --line_width: clamp(25.5rem, 45vw, 31.25rem);
+
+    --block_width: calc(100vw - var(--line_width));
+    --content_width: clamp(20rem, 34vw, 25.5rem);
+    --content_padding: 1.125rem;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: max-content;
+    background: var(--color-black);
+  }
+
+  .ourmission::before {
+    z-index: 1;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 96px 87px 0;
+    border-color: transparent var(--color-blue) transparent transparent;
+    transform: rotate(0deg);
+  }
+
+  .ourmission-picture {
+    position: relative;
+    width: var(--line_width);
+    height: var(--ourmission-img_height);
+    overflow: hidden;
+  }
+
+  .ourmission-picture::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: var(--line_width);
+    height: var(--line_height); /*тут значение 76px*/
+    background: var(--color-white);
+  }
+
+  .ourmission-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--ourmission-img_width);
+    height: auto;
+  }
+
+  .ourmission-block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: var(--block_width);
+    width: 100%;
+  }
+
+  .ourmission-block::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: calc(
+      (var(--block_width) - var(--content_width) - (2 * var(--content_padding))) /
+        2
+    );
+    height: var(--line_height);
+    background: var(--color-white);
+  }
+
+  .ourmission-content {
+    position: relative;
+    box-sizing: content-box;
+    width: var(--content_width);
+    min-width: 20rem;
+    margin-top: 8.75rem;
+    padding: 0 var(--content_padding);
+  }
+
+  .ourmission-content::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 76px 0 0 88px; /*тут значение 76px и 88px*/
+    border-color: transparent transparent transparent var(--color-white);
+    transform: rotate(0deg);
+  }
+
+  .title {
+    font-family: var(--font-SpaceAge);
+    font-weight: 400;
+    font-size: clamp(
+      1.75rem,
+      0.5386rem + 3.365vw,
+      2.625rem
+    ); /*42px - 992px 28px - 576px*/
+    line-height: 60%;
+    color: var(--color-white);
+  }
+
+  .text {
+    font-size: clamp(
+      0.625rem,
+      0.27868rem + 0.962vw,
+      0.875rem
+    ); /*14px - 992px 10px - 576px*/
+    line-height: 200%;
+    color: var(--color-gainsboro);
+    white-space: normal;
+    margin: clamp(30px, 5.2vw, 40px) 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ourmission {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: auto;
+    }
+
+    .ourmission-picture {
+      width: 100vw;
+      height: max-content;
+    }
+
+    .ourmission-picture::after,
+    .ourmission-content::after {
+      display: none;
+    }
+
+    .ourmission-img {
+      position: static;
+      max-width: 31.25rem;
+      width: inherit;
+    }
+
+    .ourmission-block {
+      max-width: 100%;
+      align-items: center;
+    }
+
+    .ourmission-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 90vw;
+      width: 100%;
+      min-width: 20rem;
+      margin-top: 3.1875rem;
+      margin-bottom: 5.25rem;
+      text-align: center;
+    }
+  }
+</style>

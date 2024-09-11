@@ -46,6 +46,12 @@ const { ["class"]: className = "" } = Astro.props;
     background: var(--color-blue);
   }
 
+  .link-design_blue:hover {
+    background: var(--color-white);
+    color: var(--color-blue);
+    transition: all 1s ease;
+  }
+
   .link-design_black {
     background: var(--color-black);
     transition: all 1s ease;
@@ -55,7 +61,6 @@ const { ["class"]: className = "" } = Astro.props;
   .link-design_black:hover {
     background: var(--color-white);
     transition: all 1s ease;
-
   }
 
   .link-design_black:hover.link-design{
